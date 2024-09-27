@@ -2393,7 +2393,7 @@ async def auto_filter(client, msg, spoll=False):
             z = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
                                         reply_markup=InlineKeyboardMarkup(btn))
             if SELF_DELETE:
-                await asyncio.sleep(SELF_DELETE_SECONDS)
+                await asyncio.sleep(7200)
                 await z.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
@@ -2401,21 +2401,21 @@ async def auto_filter(client, msg, spoll=False):
 
             m = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
             if SELF_DELETE:
-                await asyncio.sleep(SELF_DELETE_SECONDS)
+                await asyncio.sleep(7200)
                 await m.delete()
                                           
         except Exception as e:
             logger.exception(e)
             n = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
             if SELF_DELETE:
-                await asyncio.sleep(SELF_DELETE_SECONDS)
+                await asyncio.sleep(7200)
                 await n.delete()         
     else:
         p = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(250)
+        await asyncio.sleep(7200)
         await p.delete()
         if SELF_DELETE:
-            await asyncio.sleep(SELF_DELETE_SECONDS)
+            await asyncio.sleep(7200)
             await p.delete()
             # thanks = await message.reply_text(f"♥ Thank you **{message.from_user.mention}**...\n<code>🎉 we love you 🎊</code>")
             # embrace = await thanks.reply_sticker(sticker=random.choice(lazystickerset))
