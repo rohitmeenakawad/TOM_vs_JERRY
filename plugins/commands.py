@@ -292,7 +292,7 @@ async def start(client, message):
         try:
             # Create the inline keyboard button with callback_data
             # button = InlineKeyboardButton('▶ Gen Stream / Download Link', callback_data=f'generate_stream_link:{file_id}')
-            button = InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=f'https://t.me/Tom_vs_Jerry_Movie')
+            button = InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=f'https://t.me/Jerry_Movies')
 
             # Create the inline keyboard markup with the button
             keyboard = InlineKeyboardMarkup([[button]])
@@ -338,7 +338,7 @@ async def start(client, message):
         f_caption = f"{files.file_name}"
 
     # button = InlineKeyboardButton('▶ Gen Stream / Download Link', callback_data=f'generate_stream_link:{file_id}')
-    button = InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=f'https://t.me/Tom_vs_Jerry_Movie')
+    button = InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=f'https://t.me/Jerry_Movies')
 
     # Create the inline keyboard markup with the button
     keyboard = InlineKeyboardMarkup([[button]])
